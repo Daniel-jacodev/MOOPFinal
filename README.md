@@ -25,29 +25,15 @@ Siga este passo a passo exatamente como descrito para garantir que tudo funcione
 Assim que o terminal do Codespace abrir, copie e cole o bloco de comandos abaixo para instalar o ambiente e as dependências (Python, Java e TKO):
 Bash
 
-# Instalando as ferramentas básicas de desenvolvimento
 sudo apt update && sudo apt install -y build-essential pipx wslu
-
-# Configurando o web browser
 grep -qxF 'export BROWSER="wslview"' ~/.bashrc || echo 'export BROWSER="wslview"' >> ~/.bashrc
-
-# Verificando a versão do Python
-python --version
-# NOTA: Se for menor que o 3.12, instale manualmente com os comandos abaixo:
-# sudo add-apt-repository ppa:deadsnakes/ppa
-# sudo apt update
-# sudo apt install python3.12
-
-# Instalando o tko (Sistema de submissão)
+sudo add-apt-repository ppa:deadsnakes/ppa
+sudo apt update
+sudo apt install python3.12
 pipx install tko
-# Adicionando o tko no path
 pipx ensurepath
-
-# Reinicie o terminal ou abra uma nova aba de terminal para aplicar as mudanças do path
-# Teste a instalação com o comando:
-# tko --version
-
-# Instalando o compilador Java (Essencial para a maratona)
+# Reinicie o terminal
+tko --version
 sudo apt install openjdk-11-jdk
 
 4º Passo: Inicializando a Maratona
