@@ -50,24 +50,33 @@ class Instrumento {
 // }
 
 
-// ==================================================================================
-// PASSO 4: O PALCO (GERENCIADOR)
-// ==================================================================================
 class Palco {
     private ArrayList<Instrumento> instrumentos = new ArrayList<>();
 
     public void adicionar(Instrumento i) {
-        
+        instrumentos.add(i);
+        System.out.println(i.getNome() + " adicionado ao palco.");
     }
 
     public Instrumento buscar(String nome) {
-        
+        for (Instrumento i : instrumentos) {
+            if (i.getNome().equalsIgnoreCase(nome)) {
+                return i;
+            }
+        }
         return null;
     }
 
     public void showAoVivo() {
         System.out.println("--- INICIANDO O SHOW ---");
-       
+        
+        for (Instrumento i : instrumentos) {
+            try {
+                System.out.println(i.tocar());
+            } catch (InstrumentoDesafinadoException e) {
+                System.out.println("FALHA NO SHOW: " + e.getMessage());
+            }
+        }
         
         System.out.println("--- FIM DO SHOW ---");
     }
