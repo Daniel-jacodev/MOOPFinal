@@ -80,3 +80,5 @@ A Maratona simula um ambiente competitivo real. A estratégia é tão importante
     Material de Apoio: É permitido o uso de papel e caneta para rascunhos, diagramas e lógica.
 
 Boa sorte a todos e que vença o melhor código! 🚀
+
+[Insira aqui o nome da sua equipe e os participantes presentes]
