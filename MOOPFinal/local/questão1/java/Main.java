@@ -85,6 +85,7 @@ public class Main {
 
                     case "midia": // PASSO 1
                         midiaTemp = new Midia(tokens[1]);
+                        cineDev.adicionar(midiaTemp);
                         break;
                     
                     case "tocar_midia": // PASSO 1
